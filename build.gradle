@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.webstilos'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'com.google.guava', name: 'guava', version: '27.1-jre'
+
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+	compile group: 'javax.inject', name: 'javax.inject', version: '1'
+
+	testCompile group: 'org.assertj', name: 'assertj-core', version: '3.12.2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
