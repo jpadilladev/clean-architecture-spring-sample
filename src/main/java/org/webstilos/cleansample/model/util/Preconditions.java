@@ -2,8 +2,9 @@ package org.webstilos.cleansample.model.util;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-public class Preconditions {
+public final class Preconditions {
 
+	private Preconditions(){}
 
 	public static <T> T checkNotNull(T value, String reason) {
 		if (value == null) {
